@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonlar.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>JavaScript If Koşullar</h1>
+			<p>Farklı durumlarda farklı işlemler yapmak gerekebilir. Bu durumların tespit edilmesi için koşul ifadeleri bize yardımcı olur.</p>
+			<p>Şartların sağlanıp sağlanılmadığını tespit ederken standart üç ifade kullanılır. Bunlar if, else if ve else'dir. Örneği inceleyelim;</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var mesaj = "";
+
+	var saat = 5;
+
+	if ( saat < 10 )
+	{
+	    mesaj = "İyi sabahlar";
+	}
+	else if ( saat < 20 )
+	{
+	    mesaj = "İyi günler";
+	}
+	else
+	{
+	    mesaj = "İyi akşamlar";
+	}
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Örnekte saat değişkeni 5 olarak belirtilmiştir. Bu değişkenin sayısal değerine göre mesaj değişkeninin şekillenmesi isteniyor. Eğer saat 10'dan küçükse "İyi sabahlar", eğer 20'den küçükse "İyi günler", hiçbiri değilse "İyi akşamlar" demesi sağlanıyor. Dikkatli incelendiğinde parantez içerisinde koşullara yer veriliyor.</p>
+			<p>if ( koşul sağlanıyorsa ) { şunları yap }</p>
+			<p>else if ( koşul sağlanıyorsa ) { şunları yap }</p>
+			<p>else { şunları yap }</p>
+			<p>Koşul oluştururken mutlaka IF ile başlanır. Parantez içinde koşul belirtilir ve yapılacaklar kıvrımlı parantez içinde yazılır.</p>
+			<p>ELSE IF kullanmak için öncelikle IF kullanmış olmak gereklidir. Yani IF kullanmadan ELSE IF ile bir kontrol yapılamaz. "O olmadı bari bunu dene" anlamı taşır.</p>
+			<p>ELSE kullanırken parantez açılmaz ve koşul yazılmaz. ELSE, diğer tüm if ve else ifler çalışmadıysa, yani hiçbir koşul sağlanılamadıysa yapılacak şeyi belirtir.</p>
+			<h2>Koşul Operatörleri</h2>
+			<p>Koşul ifadeleri mantıksal değerlerdir. Doğru (true) ya da yanlış (false) olabilirler. İki eşittir (==) bir koşul ifadesidir ve iki değişken ya da değerin denkliğini doğrulamayı sağlar. Örneğin;</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var x = 5;
+
+	var y = 6;
+
+	var sonuc = "";
+
+	if ( x == y )
+	{
+	   sonuc = "Birbirine eşit";
+	}
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Şimdi bu koşul ifadelerini ve anlamlarını listeleyelim:</p>
+			<h3>Karşılaştırmalar</h3>
+			<table border="1" class="table">
+				<thead>
+				   <tr><th>İşaret</th>
+				   <th>Anlamı</th>
+				   <th>Koşul İfadesi</th>
+				   <th>Sonuç</th>
+				</tr></thead>
+				<tbody><tr>
+				   <td rowspan="2">==</td>
+				   <td rowspan="2">Birbirine eşitse</td>
+				   <td>5 == 8</td>
+				   <td>false</td>
+				</tr>
+				<tr>
+				   <td>5 == 5</td>
+				   <td>true</td>
+				</tr>
+				<tr>
+				   <td>!=</td>
+				   <td>Eşit değilse</td>
+				   <td>5 != 8</td>
+				   <td>true</td>
+				</tr>
+				<tr>
+				   <td rowspan="2">===</td>
+				   <td rowspan="2">Türleri eşitse</td>
+				   <td>5 === "5"</td>
+				   <td>false</td>
+				</tr>
+				<tr>
+				   <td>5 === 5</td>
+				   <td>true</td>
+				</tr>
+				<tr>
+				   <td>!==</td>
+				   <td>Türleri eşit değilse</td>
+				   <td>5 !== "5"</td>
+				   <td>true</td>
+				</tr>
+				<tr>
+				   <td>&gt;</td>
+				   <td>Büyükse</td>
+				   <td>5 &gt; 8</td>
+				   <td>false</td>
+				</tr>
+				<tr>
+				   <td>&lt;</td>
+				   <td>Küçükse</td>
+				   <td>5 &lt; 8</td>
+				   <td>true</td>
+				</tr>
+				<tr>
+				   <td>&gt;=</td>
+				   <td>Büyük veya eşitse</td>
+				   <td>5 &gt;= 8</td>
+				   <td>false</td>
+				</tr>
+				<tr>
+				   <td>&lt;=</td>
+				   <td>Küçük veya eşitse</td>
+				   <td>5 &lt;= 8</td>
+				   <td>true</td>
+				</tr>
+				</tbody></table>
+				<h3>Mantıksal İfadeler</h3>
+				<table border="1" class="table">
+					<thead>
+					   <tr><th>İşaret</th>
+					   <th>Anlamı</th>
+					   <th>Koşul İfadesi</th>
+					   <th>Sonuç</th>
+					</tr></thead>
+					<tbody><tr>
+					   <td>&amp;&amp;</td>
+					   <td>ve</td>
+					   <td>x &lt; 10 &amp;&amp; y &gt; 1</td>
+					   <td>true</td>
+					</tr>
+					<tr>
+					   <td>||</td>
+					   <td>veya</td>
+					   <td>x == 5 || y == 5</td>
+					   <td>false</td>
+					</tr>
+					<tr>
+					   <td>!</td>
+					   <td>değilse</td>
+					   <td>!(x == y)</td>
+					   <td>true</td>
+					</tr>
+					</tbody></table>
+					<p>Mantıksal ifadelerden <span style="color: red">ve (&&)</span> bağlacında her iki durum da doğru ise koşul sağlanır. Eğer <span style="color: red">veya (||)</span> bağlacı kullanılmışsa belirtilen koşullardan sadece biri doğru olsa da önerme doğrudur.</p>
+					<h2>Koşul İfadelerini Tek Satırda Kullanmak</h2>
+					<p>JavaScriptte koşul ifadelerinde if kullanmak yerine tek satırda <span style="color: red">( koşul ) ? doğruysa : yanlışsa;</span> yapısını da kullanabiliriz. Aşağıdaki iki kullanım da aynı işi görecektir;</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   var mesaj = "Yaşınız 18'den ";
+
+	if ( yas >= 18 )
+	{
+	   mesaj += "büyük!";
+	}
+	else
+	{
+	   mesaj += "küçük!";
+	}
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+  	var yas = 19;
+
+	var mesaj = "Yaşınız 18'den ";
+
+	mesaj += ( yas >= 18 ) ? "büyük!" : "küçük";
+</script>   
+					</xmp>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonlar.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>JavaScript String İşlemleri</h1>
+			<p>Bazı değişkenler "Okul", "Ağaç", "Türkiye'nin başkenti Ankara'dır." gibi metinleri içerir. JavaScript'te metin değişkenleri kesme işareti ya da tırnak arasına alınarak işlenir.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    var bilgi = "Türkiye'nin başkenti Ankara'dır.";
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Metin verisi içerisindeki her bir karaktere, karakter sırasının bir eksiğini değişkenin sağında köşeli parantezde yazarak ulaşabilirsiniz. Örneğin "Ankara" değişkeninin ilk harfi olan A'ya ulaşmak için [0] yazmalıyız.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    var kelime = "Ankara";
+
+    var harf = kelime[0]; // "A" karakteri 
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<input type="text" name="ornek1" id="ornek1" value="Ankara">
+				<button onclick="ornek1()">kelime[0]</button>
+				<input type="text" name="ornek1cikti" id="ornek1cikti">
+			</fieldset>
+			<p>Eğer veri içerisinde tırnak kullanacaksak değişkeni kesme işareti ile tanımlayabilir, kesme işareti kullanacaksak ise tırnak işareti ile tanımlayabiliriz. Örneğe bakınız:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var bilgi = "Türkiye'nin başkenti Ankara'dır.";
+
+	var bilgi = 'Yaşadığım yer "Ankara" dır.';
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Yukarıdaki örnekteki işlemi hiç yapmayıp onun yerine bu karakterden önce kaçış karakteri olan ters bölü (\) işareti kullanılabiliriz.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var bilgi = 'Türkiye\'nin başkenti Ankara\'dır.';
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Tırnak ve kesme işareti kullanımında yukarıda belirtilen şekilde davranılmazsa JavaScript kodunuz hata verir ve çalışmaz.</p>
+			<h2>Karakter Uzunluğu</h2>
+			<p>Eğer değişken türü metinse değişkenden sonra .length yazarak karakter uzunluğunu bulabiliriz.
+			</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var kelime = "Ankara";
+
+	var uzunluk = kelime.length; // uzunluk değişkeninin değeri 6 dır
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<input type="text" name="ornek2" id="ornek2" value="Ankara">
+				<button onclick="ornek2()">Length()</button>
+				<input type="text" name="ornek2cikti" id="ornek2cikti">
+			</fieldset>
+			<h2>Değişken İçerisinde Kelime Bulmak</h2>
+			<p>indexOf() yöntemi ile bir cümle içerisinde geçen bir yazının ilk bulunduğu yer elde edilir.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var metin = "Cümlede ilk bul geçen yeri bul bakalım.";
+
+	var konum = metin.indexOf("bul"); // konumun değeri 12 olur.
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<input type="text" name="ornek3" id="ornek3" value="Cümlede ilk bul geçen yeri bul bakalım.">
+				<button onclick="ornek3()">indexOf("bul")</button>
+				<input type="text" name="ornek3cikti" id="ornek3cikti">
+			</fieldset>
+			<p>Son benzer kelimeyi bulmak içinse bu kez <span style="color: red">lastIndexOf()</span> yöntemini kullanırız. Yukarıdaki örnekte indexOf() olan yeri lastIndexOf() olarak değiştirdiğinizde 12 değil 27 değeri aldığını göreceksiniz.</p>
+			<p><span style="color: red">search()</span> yöntemi de metin içerisinde arama yapmanızı sağlar ve IndexOf() gibi ilk bulduğu kelimeyi gösterir. Ancak sonraki konularda değineceğimiz düzenli ifadeler kullanımına olanak sağlaması yönüyle indexOf()'tan ayrılır.</p>
+			<h2>Yazıyı Değiştirmek</h2>
+			<p><span style="color: red">replace()</span> yöntemi değişkende yer alan bir kelimeyi başkasıyla değiştirmenizi sağlar. Parantez içinde ilk olarak bulmasını istediğimiz kelimeye yer veririz. Ardından virgül ile ayırarak yerine koyulacak kelimeyi yazarız.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var kelime = "Türkiye'nin başkenti Antalya'dır.";
+
+	kelime = kelime.replace("Antalya","Ankara");
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<input type="text" name="ornek4" id="ornek4" value="Türkiye'nin başkenti Antalya'dır.">
+				<button onclick="ornek4()">replace("Antalya","Ankara")</button>
+				<input type="text" name="ornek4cikti" id="ornek4cikti">
+			</fieldset>
+			<p>replace() yönteminde de düzenli ifadeler (regular expressions) kullanılabilir.</p>
+			<h2>Küçük Harfleri Büyük Harfe Dönüştürmek</h2>
+			<p><span style="color: red">toUpperCase()</span> yöntemi, bir metin türü değişkendeki tüm harfleri büyük yapmamızı sağlar.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var metin1 = "merhaba dünya!";
+
+	var metin2 = metin1.toUpperCase();   // "MERHABA DÜNYA" olur.
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<input type="text" name="ornek5" id="ornek5" value="merhaba dünya!">
+				<button onclick="ornek5()">toUpperCase()</button>
+				<input type="text" name="ornek5cikti" id="ornek5cikti">
+			</fieldset>
+			<h2>Büyük Harfleri Küçük Harfe Dönüştürmek</h2>
+			<p>toLowerCase() yöntemi, bir metin türü değişkendeki tüm harfleri küçültür.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var metin1 = "MERHABA DÜNYA!";
+
+	var metin2 = metin1.toLowerCase();   // "merhaba dünya" olur.
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<input type="text" name="ornek6" id="ornek6" value="MERHABA DUNYA!">
+				<button onclick="ornek6()">toLowerCase()</button>
+				<input type="text" name="ornek6cikti" id="ornek6cikti">
+			</fieldset>
+			<h2>Metni Dizeye Dönüştürmek</h2>
+			<p>Bir metni dizeye dönüştürürken <span style="color: red">split()</span> yöntemini kullanırız. Bu yöntemle metinde geçen özel bir karakter dizeyi oluşturan değişkenler için sınırları belirler. Bu karakteri split() yönteminde parantez arasında yazarız.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var metin = "a,b,c,d,e";
+
+	var harfler = metin.split(",");
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<input type="text" name="ornek7" id="ornek7" value="a,b,c,d,e">
+				<button onclick="ornek7()">array[2]</button>
+				<input type="text" name="ornek7cikti" id="ornek7cikti">
+			</fieldset>
+			<h2>Metinden Belli Bir Kısmı Almak</h2>
+			<p>Varsayalım "Ankara başkenttir." cümlesindeki ilk altı karakteri yani "Ankara" olan kısmı almak istiyoruz. Bunun için <span style="color: red">substring()</span> yöntemini kullanabiliriz. Bu kodu kullanırken parantez içine iki sayı yazılır. Yöntem belirtilen bu iki sayı ve arasındaki karakterleri getirir.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var metin = "Ankara başkenttir.";
+
+	var kelime = metin.substring(0, 6); // Ankara elde ederiz
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<input type="text" name="ornek8" id="ornek8" value="Ankara başkenttir.">
+				<button onclick="ornek8()">substring(0, 6)</button>
+				<input type="text" name="ornek8cikti" id="ornek8cikti">
+			</fieldset>
+			<h2>JavaScript Özel Karakterleri</h2>
+			<p>Yukarıda bahsettiğimiz gibi metin türü değişkenlerin değerlerini yazarken tırnak ve kesme işareti kullanırız. Ancak değerde de bu karakterler geçiyorsa karışıklık ortaya çıkar.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+   	<span style="color: red">"Bizler</span> "Anadolu Kaplanları" <span style="color: red">olarak bilinirdik."</span>				
+				</div>
+			</div>
+			<p>Yukarıdaki cümle JavaScript tarafından "Bizler " olarak algılanır ve devamı hataya sebep olur.
+			</p>
+			<p>Bu problemi çözmek için ters bölü işareti (\) ya da diğer adıyla kaçış işareti kullanırız. Aşağıdaki ifade olması gerekendir;</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+   	<span style="color: red">"Bizler \"Anadolu Kaplanları\" olarak bilinirdik."</span>				
+				</div>
+			</div>
+			<p>Kaçış işareti ayrıca bu işareti kullanmak istediğimizde ve aşağıda sayılan bazı durumlarda da kullanılabilir.</p>
+			<table align="center" width="99.7%" border="1" cellspacing="0" cellpadding="3" style="font-family: myFont; font-size: 25px;color: white;">
+				  <tr>
+				    <td>Karakter</td>
+				    <td>Anlamı</td>
+				  </tr>
+				  <tr>
+				    <td>\\</td>
+				    <td>\ işaretini kullanmak için</td>
+				  </tr>
+				  <tr>
+				    <td>\n</td>
+				    <td>yeni satıra geçmek için</td>
+				  </tr>
+				  <tr>
+				    <td>\r</td>
+				    <td>satırbaşı</td>
+				  </tr>
+				  <tr>
+				    <td>\t</td>
+				    <td>paragraf boşluğu</td>
+				  </tr>
+			</table>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

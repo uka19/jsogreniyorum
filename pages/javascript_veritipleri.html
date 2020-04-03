@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonlar.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>Veri Tipleri</h1>
+			<p>JavaScript'te değişkenler tanımlanırken herhangi bir veri türü belirtilmez. Hangi veri türü kullanıldığını değişkenin değerinden anlayabiliriz.</p>
+			<p style="color: red">String: Metinsel veri türüdür.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    var deneme00 = "zinzinzibidi";
+    var deneme01 = "1234";
+    var deneme02 = '9Cdeneme';
+</script>    
+					</xmp>
+				</div>
+			</div>
+			<p>Bir değişkeni string olarak tanımlayabilmek için = operatöründen sonra tırnak işareti içerisinde değişkenin değerini yazmalıyız. Yukarıdaki örnekte 'deneme00' adlı bir değişken tanımladık ve değerini zinzinzibidi şeklinde string olarak belirledik. deneme01 değişkeni de string'dir. Çünkü değeri sayısal olmasına rağmen tırnak işaretleri içinde yazdık. Tek tırnak ('') işareti içerisine yazılan değerler de string olarak algılanır.</p>
+			<p style="color: red">Number: Sayısal veri türüdür</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    var deneme03 = 12;  // Tamsayı
+    var deneme04 = 2.3; // Ondalıklı sayı
+</script>  
+					</xmp>
+				</div>
+			</div>
+			<p>JavaScript'te tamsayı, ondalıklı, 8 ve 16 tabanlı olmak üzere dört farklı sayısal veri türü oluşturulabilir. = (eşittir) operatöründen sonra sayısal değerlerin yazılması yeterlidir.</p>
+			<p style="color: red">Boolean: Mantıksal veri türüdür.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    var deneme05 = true;
+    var deneme06 = false;
+</script>  
+					</xmp>
+				</div>
+			</div>
+			<p>Değişkenin değeri ya true (doğru) ya da false (yanlış) olabilir.</p>
+			<p style="color: red">Array (Dizi): Grup halinde saklanmak istenen verilerin barındırıldığı veri türüdür.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    var deneme07 = new Array("zibidi","zinzin","300",42,16);
+</script>                                 
+					</xmp>
+				</div>
+			</div>
+			<p>deneme07 adlı değişken bir dizidir. Çünkü içerisinde beş farklı veri vardır.</p>
+			<p style="color: red">Undefined ve Null: undefined dilimizde tanımsız ve null ise boş anlamındadır. Tanımlanmamış değişkenler için undefined ve boş değişkenler için null kullanılır.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    var deneme08;        //undefined
+    var deneme09 = null; // null
+</script>                                
+					</xmp>
+				</div>
+			</div>
+			<p>deneme08 değişkeni tanımsız, deneme09 ise boş bir değişkendir.</p>
+
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

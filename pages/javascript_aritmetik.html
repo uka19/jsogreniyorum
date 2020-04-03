@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonlar.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>JavaScript Aritmetik</h1>
+			<p>Bu derste JavaScript ile rakamlar üzerinde yapılabilecek işlemler anlatılacaktır.
+			Aritmetiksel işlemlerde kullanılan +, -, /, * gibi simgeler operatör olarak adlandırılır.</p>
+			<h2>JavaScript Aritmetik Operatörleri</h2>
+			<table border=2 align="center"style="font-family: myFont;font-size: 20px;">
+				<tr>
+					<td>Operatörler</td>
+					<td>Açıklama</td>
+				</tr>
+				<tr>
+					<td>+</td>
+					<td>Toplama</td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td>Çıkarma</td>
+				</tr>
+				<tr>
+					<td>*</td>
+					<td>Çarpma</td>
+				</tr>
+				<tr>
+					<td>/</td>
+					<td>Bölme</td>
+				</tr>
+				<tr>
+					<td>%</td>
+					<td>Mod</td>
+				</tr>
+				<tr>
+					<td>++</td>
+					<td>Arttırma</td>
+				</tr>
+				<tr>
+					<td>--</td>
+					<td>Azaltma</td>
+				</tr>
+			</table>
+			<p>Basit bir aritmetik işlem iki sayı üzerinde gerçekleşir.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+var toplam = 5 + 10;   
+					</xmp>
+				</div>
+			</div>
+			<p>Veya + operatörü ile toplama işlemini önceden tanımlanmış ve değer atanmış iki değişken ile yapabilirsiniz:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+var sayi1 = 10;
+var sayi2 = 5;
+var toplam = sayi1 + sayi2;   
+					</xmp>
+				</div>
+			</div>
+			<p>veya hem değişken hem de sabit sayıyı işleme sokabilirsiniz:</p>
+			<h2>Operatörler ve İşlenenler (Operand)</h2>
+			<p>Aritmetik işlemlerde kullanılan sayılar işlenen (operand) olarak adlandırılırlar.
+			Sayılar üzerinde yapılacak işlem operatör tarafından tanımlanır: 10 + 5  işleminde + bir operatördür.
+			JavaScript'te toplama operatörü + işaretidir.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Toplama</h2>
+				<div id="codeArea">
+					<xmp>
+var sayi1 = 10;
+var sayi2 = 5;
+var toplam = sayi1 + sayi2;   
+					</xmp>
+				</div>
+			</div>
+			<p>JavaScript programlama dilinde çıkartma operatörü -  işaretidir.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Çıkartma</h2>
+				<div id="codeArea">
+					<xmp>
+var sayi1 = 10;
+var sayi2 = 5;
+var sonuc= sayi1 - sayi2; 
+					</xmp>
+				</div>
+			</div>
+			<p>JavaScript programlama dilinde çarpma operatörü * işaretidir.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Çarpma</h2>
+				<div id="codeArea">
+					<xmp>
+var sayi1 = 10;
+var sayi2 = 5;
+var sonuc= sayi1 * sayi2; 
+					</xmp>
+				</div>
+			</div>
+			<p>JavaScript programlama dilinde mod alma operatörü % işaretidir. Mod alma, bölme işleminde kalanın bulunmasıdır:</p>
+			<div id="codeblock">
+				<h2 style="color: white">Mod Alma</h2>
+				<div id="codeArea">
+					<xmp>
+var sayi1 = 10;
+var sayi2 = 5;
+var sonuc= sayi1 * sayi2; 
+					</xmp>
+				</div>
+			</div>
+			<p>JavaScript programlama dilinde ++ sayıyı arttırmak için kullanılır:</p>
+			<div id="codeblock">
+				<h2 style="color: white">Arttırma</h2>
+				<div id="codeArea">
+					<xmp>
+var sayi = 10;
+sayi ++;
+					</xmp>
+				</div>
+			</div>
+			<p>JavaScript programlama dilinde -- sayıyı azaltma için kullanılır:</p>
+			<div id="codeblock">
+				<h2 style="color: white">Azaltma</h2>
+				<div id="codeArea">
+					<xmp>
+var sayi = 10;
+sayi --;
+					</xmp>
+				</div>
+			</div>
+			<h2>JavaScript Operatör Önceliği</h2>
+			<p>Operatör önceliği, aritmetik işlemde hangi operatörün önce işletileceğini ifade eder.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+var sonuc = 10 + 5 * 3;
+					</xmp>
+				</div>
+			</div>
+			<p>Yukarıdaki örnekte, sonuç sizce 15 * 3 mü yoksa 10 + 15 mi?
+			Hangi işlem önce yapılacak? Toplama mı yoksa çarpma işlemi mi?
+			Geleneksel matematikte olduğu gibi önce çarpma işlemi yapılır.
+			Çarpma (*) ve bölme (/)  toplama (+) ve çıkartmadan (-) daha önceliklidir.</p>
+			<p>Okulda gördüğünüz matematikte olduğu gibi öncelik sırası parantez ile değiştirilebilir:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+var sonuc = (10 + 5) * 3;
+					</xmp>
+				</div>
+			</div>
+			<p>Parantez kullanıldığında öncelikli olarak parantez içindeki işlem gerçekleşir.
+			Eğer işlem öncelikleri aynıysa, işlemler soldan sağa doğru yapılır:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+var sonuc = 10 + 5 - 3;
+					</xmp>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

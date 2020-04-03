@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonlar.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>JavaScript Döngüler</h1>
+			<p>Döngüleri şu şekildeki basit bir bilgisayar oyunu olarak düşünebilirsiniz: Doğu yönünde 5 adım ilerle ve devamında batı yönünde 3 adım ilerleyerek hazineyi bul. Bu fikri basitçe kodlamak gerekirse:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	var adım;
+	for (adım = 0; adım < 5; adım++) {
+	  // 5 defa ekrana yazıyor
+	  // adım 0'dan 4'e kadar değerler alıyor.
+	  console.log('Doğu yönünde bir adım atılıyor.');
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Birçok döngü türü vardır, fakat özünde hepsi aynı şeyi yaparlar: ardı ardına belirlenen bir işlemi gerçekleştirirler.</p>
+			<p>Döngünün bitiş ve başlangıç noktalarının belirlenmesi için çeşitli döngü mekanizmaları mevcuttur. Bir döngünün diğer döngülere göre daha avantajlı olmasını sağlayan farklı durumlar vardır.</p>
+			<p>JavaScript'teki döngü ifadeleri aşağıdaki şekilde listelenmiştir:
+				<a href="#for" style="color: black"><p class="madde">for döngüsü</p></a>
+				<a href="#dowhile" style="color: black"><p class="madde">do...while döngüsü</p></a>
+				<a href="#while" style="color: black"><p class="madde">while döngüsü</p></a>
+				<a href="#etiketlenmis" style="color: black"><p class="madde">Etiketlenmiş ifadeler</p></a>
+				<a href="#break" style="color: black"><p class="madde">break ifadesi</p></a>
+				<a href="#continue" style="color: black"><p class="madde">continue ifadesi</p></a>
+				<a href="#forin" style="color: black"><p class="madde">for...in ifadesi</p></a>
+				<a href="#forof" style="color: black"><p class="madde">for...of ifadesi</p></a>
+			</p>
+			<h2 id="for">for döngüsü</h2>
+			<p>Bir for döngüsü, belirlenen koşul sağlandığı sürece içerdiği komutların çalıştırılmasını sağlar. JavaScript'teki for döngüsü, Java ve C dilindeki for döngüsü ile benzerdir. For döngüsünün söz dizimi aşağıdaki şekildedir:</p>
+			<div id="codeblock">
+				<h4>Tanım</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	for ([başlangıçAtaması]; [koşulİfadesi]; [arttırımİfadesi]) 
+  	ifade	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<form name="selectForm">
+			  	<p align="center">
+				    <label for="muzikTurleri">Sevdiğiniz müzik türlerini seçip aşağıdaki butona basınız:</label><br><br>
+				    <select id="muzikTurleri" name="muzikTurleri" multiple="multiple">
+				      <option selected="selected">Pop</option>
+				      <option>Rap</option>
+				      <option>Rock</option>
+				      <option>Arabesk</option>
+				      <option>Türk Sanat Müziği</option>
+				      <option>Klasik Müzik</option>
+				    </select>
+			  	</p>
+			  	<div align="center">
+				  	<button onclick="ornek32()" type="button">Kaç tane seçildi</button>
+				  	<input type="text" name="ornek32cikti" id="ornek32cikti">
+			  	</div>
+			</form>
+			<div id="codeblock" style="margin-top: 10px">
+				<h4>Tanım</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	function kaçTane(müzikTürleri) {
+	  var seçilenMüzikSayısı = 0;
+	  for (var i = 0; i < müzikTürleri.options.length; i++) {
+	    if (müzikTürleri.options[i].selected) {
+	      seçilenMüzikSayısı++;
+	    }
+	  }
+	  return seçilenMüzikSayısı;
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<h2 id="dowhile">do...While Döngüsü</h2>
+			<p>do...while döngüsü, belirlenen bir koşul sağlandığı sürece döngünün çalıştırılmasına olanak tanır. Bir do...while döngüsü aşağıdaki gibidir:</p>
+			<div id="codeblock">
+				<h4>Tanım</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	do
+	  ifade
+	while (koşul);	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Aşağıdaki örnekte, do döngüsü en az bir kere çalıştırılır, ve i değişkeninin değeri 5'ten küçük olduğu sürece çalıştırma devam eder:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	var i = 0;
+	do {
+	  i += 1;
+	  console.log(i);
+	} while (i < 5);	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<h2 id="while">while döngüsü</h2>
+			<p>Bir while döngüsü, belirlenen koşul sağlandığı sürece çalıştırılmaya devam eder. Örnek bir while döngüsü aşağıdaki gibidir:</p>
+			<div id="codeblock">
+				<h4>Tanım</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	while (koşul)
+  	ifade	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Aşağıdaki while döngüsü, n değişkeni 3'ten küçük olduğu sürece çalıştırılır:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	var n = 0;
+	var x = 0;
+	while (n < 3) {
+	  n++;
+	  x += n;
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Sonsuz döngülerden uzak durulmalıdır.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	while (true) {
+	  console.log("Merhaba dünya");
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<h2 id="etiketlenmis">Etiketlenmiş ifadeler</h2>
+			<p>Bir etiketlenmiş ifadede , bir anahtar kelime ve bu kelimeye bağlı çalıştırılacak bir ifade bulunur.Anahtar kelime kullanılarak, program içerisindeki herhangi bir yerde, anahtar kelime ile ilişkili ifade çalıştırılabilir. Örneğin, bir döngü, anahtar kelime ile etiketlenerek, uygulama içerisindeki herhangi bir yerden çalıştırılabilir.</p>
+			<p>Etiketlenmiş bir ifade aşağıdaki şekildedir:</p>
+			<div id="codeblock">
+				<h4>Tanım</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	etiket :
+   	çalıştırılacak_ifade	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Etiket adı, herhangi bir değişken adının aldığı şekilde değerler alabilir. Etiket ile tanımlanan çalıştırılacak_ifade içerisinde herhangi bir komut yer alabilir.</p>
+			<p>Bu örnekte, döngüyüİşaretle etiketi while döngüsünü tanımlar.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	döngüyüİşaretle:
+	while (işaret == true) {
+	   merhabaDünya();
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<h2 id="break">break ifadesi</h2>
+			<p>break ifadesi kullanılarak bir döngüden, switch ifadesinden veya herhangi bir etiketlenmiş ifadeden çıkılabilir.</p>
+			<p>Etiket olmayan bir blokta break ifadesini kullandığınızda, break'i çevreleyen en içteki while, do-while, for, veya switch ifadesinden çıkılır ve koddaki sonraki komutların çalıştırılmasına devam edilir.</p>
+			<p>Etiket olan bir blokta break ifadesini kullanıldığında, etiketlenmiş olan ifadeden çıkılır.</p>
+			<p>break ifadesinin söz dizimi aşağıdaki gibidir:</p>
+			<div id="codeblock">
+				<h4>Tanım</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	break [etiket];	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Bu söz diziminin ilk ifadesi (break) ile, break'i çevreleyen en içteki döngü veya switch'ten çıkılır; ikinci ifade ([etiket]) ile belirlenen etiketten çıkılması sağlanır.</p>
+			<p>Aşağıdaki örnekte, değer'e eşit olan dizi elemanı bulununcaya dek dizi içerisindeki elemanlar bir döngüde gezilir.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	for (var i = 0; i < a.length; i++) {
+	  if (a[i] == değer) {
+	    break;
+	  }
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Bir etiketten çıkma</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	var x = 0;
+	var z = 0;
+
+	döngüdenÇıkmaEtiketi: while (true) {
+	  console.log("Dıştaki döngüler: " + x);
+	  x += 1;
+	  z = 1;
+	  while (true) {
+	    console.log("İçteki döngüler: " + z);
+	    z += 1;
+	    if (z === 10 && x === 10) {
+	      break döngüdenÇıkmaEtiketi;
+	    } else if (z === 10) {
+	      break;
+	    }
+	  }
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<h2 id="continue">continue ifadesi</h2>
+			<p>continue ifadesi; while, do-while, for, veya etiketlenmiş ifadelere tekrar girilmesini sağlar.</p>
+			<p>continue ifadesini herhangi bir etiket belirtmeden tek başına kullanırsanız, kendisini çevreleyen döngü bloğundaki sonraki ifadelerin çalıştırılmasını sonlandırır, ve sonraki iterasyon ile birlikte döngünün çalışmasına devam edilir. continue, break ifadesinin tam tersine döngüyü tamamen sonlandırmaz. Örneğin while döngüsünde, koşul kontrolüne geri döner. for döngüsünde ise arttırım-ifadesi'ne döner.</p>
+			<p>continue ifadesi bir etiket ile kullanılırken, etiket ile tanımlı olan döngünün devam etmesini sağlar.</p>
+			<p>continue ifadesinin söz dizimi aşağıdaki gibidir:</p>
+			<div id="codeblock">
+				<h4>Tanım</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	continue [etiket];	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Aşağıdaki örnekte yer alan while döngüsündeki continue ifadesi, i'nin değeri yalnızca 3 olduğunda çalıştırılmaktadır. Böylece n, sırasıyla şu değerleri alır: 1, 3, 7, 12.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	var i = 0;
+	var n = 0;
+	while (i < 5) {
+	  i++;
+	  if (i == 3) {
+	    continue;
+	  }
+	  n += i;
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<h2 id="forin">for...in ifadesi</h2>
+			<p>for...in döngüsü, bir nesnenin sayılabilir (enumerable) özelliklerinin üzerinde dolaşılmasını sağlar. Her bir özellik için JavaScript, belirlenen ifadeleri çalıştırır. Bir for...in döngüsü aşağıdaki şekilde oluşturulur:</p>
+			<div id="codeblock">
+				<h4>Tanım</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	for (değişken in nesne) {
+	  çalıştırılacak_ifadeler
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Aşağıdaki fonksiyon, bir nesne ve nesnenin adını parametre olarak alır. Sonrasında nesnenin tüm özellikleri üzerinde gezer ve nesnede bulunan özelliklerin adını ve değerini listeleyen bir string döndürür. </p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	function özellikleriListeOlarakVer(nesne, nesnenin_adi) {
+	  var sonuç = "";
+	  for (var i in nesne) {
+	    sonuç += nesnenin_adi + "." + i + " = " + nesne[i] + "<br>";
+	  }
+	  sonuç += "<hr>";
+	  return sonuç;
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Array elemanlarında dolaşmak için for...in kullanımı çok cazip gözükse de for...in ifadesi, sayısal indekslere ek olarak kullanıcı tanımlı özelliklerin de isimlerini döndürür. Bu yüzden dizi üzerinde gezmek için, sayısal indeksler ile birlikte kullanılan geleneksel for döngüsü daha elverişlidir. Çünkü örneğin bir Array nesnesinine özel bir değişken veya fonksiyon eklerseniz, for...in ifadesi dizi elemanlarının yanısıra eklediğiniz kullanıcı tanımlı özellikleri de getirir</p>
+			<h2 id="forof">for...of ifadesi</h2>
+			<p>for...of ifadesi bir döngü oluşturur ve gezilebilir (iterable) nesneler (Array, Map, Set, arguments nesnesi vb.) üzerinde gezer.</p>
+			<div id="codeblock">
+				<h4>Tanım</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	for (değişken of nesne) {
+	  çalıştırılacak_ifadeler
+	}	
+</script>
+
+					</xmp>
+				</div>
+			</div>
+			<p>Aşağıdaki örnekte, for...of döngüsü ve for...in döngüsü arasındaki fark gösterilmektedir. for...in döngüsü nesne değişkenlerinin isimleri üzerinde gezerken, for...of döngüsü ise değişkenlerin değerleri üzerinde gezer:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+	let dizi = [3, 5, 7];
+	dizi.selam = "merhaba";
+
+	for (let i in dizi) {
+	   console.log(i); // Çıktısı: "0", "1", "2", "selam"
+	   console.log(typeof i); //string tipi
+	}
+
+	for (let i of dizi) {
+	   console.log(i); // Çıktısı: 3, 5, 7
+	   console.log(typeof i); //degiskenin sahip old. tip
+	}
+</script>
+
+					</xmp>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonlar.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>JavaScript Dizi İşlemleri</h1>
+			<p>JavaScript dizileri birden fazla değeri tek bir değişkende depolamak için kullanılır.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var arabalar = ["araba1", "araba2", "araba3"];
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<h2>Dizi Oluşturmak</h2>
+			<p>Bir JavaScript Dizisi oluşturmanın en kolay yolu köşeli parantezleri kullanmaktır.</p>
+			<p>Yazımı şu şekildedir:</p>
+			<p>var dizi_ismi = [oge1, oge2, ...];</p>
+			<h2>JavaScript "new" Anahtar Kelimesini Kullanmak</h2>
+			<p>Bu örnek bir dizi oluşturur ve içine değerler atar:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var arabalar = new Array("araba1", "araba2", "araba3");
+</script>   
+					</xmp>
+				</div>
+				<p style="background-color: yellow">Yukarıdaki iki örnek de aynı işlemi yapar. new Array() yöntemini kullanmaya gerek yoktur.
+				Kolaylık, okunabilirlik ve işlem hızı daha iyi olduğu için birinci yöntemi kullanmalısınız.</p>
+			</div>
+			<h2>Dizinin Elemanlarına Erişme</h2>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var arabalar = ["araba1", "araba2", "araba3"];</p>
+				<button onclick="ornek12()">arabalar[1]</button>
+				<input type="text" name="ornek12cikti" id="ornek12cikti">
+				<p style="background-color: yellow">Not: Dizi index numaraları 0'dan başlar.
+				[0] birinci elamandır. [1] ise ikinci eleman.</p>
+			</fieldset>
+			<h2>Dizi Elemanını Değiştirmek</h2>
+			<p>Bu örnek ifade, arabalar dizisinin ilk elemanının değerini değiştirir:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var arabalar = ["araba1", "araba2", "araba3"];</p>
+				<p>arabalar[1] = "araba4";</p>
+				<button onclick="ornek13()">arabalar[1]</button>
+				<input type="text" name="ornek13cikti" id="ornek13cikti">
+			</fieldset>
+			<h2>Bütün Diziye Erişmek</h2>
+			<p>JavaScript ile tüm diziye birden erişmek için sadece dizinin adını kullanmak yeterlidir:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var arabalar = ["araba1", "araba2", "araba3"];</p>
+				<p>document.getElementById("demo").innerHTML = arabalar;</p>
+				<button onclick="ornek14()">arabalar</button>
+				<input type="text" name="ornek14cikti" id="ornek14cikti">
+			</fieldset>
+			<h2>Diziler Objedir</h2>
+			<p>Diziler özel bir tür objedir. JavaScript <span style="color: red">typeof</span> özelliği diziler için kullanıldığında geriye "object" değerini döndürür.</p>
+			<p>Ama JavaScript dizileri en iyi dizi olarak ifade edilebilirler.</p>
+			<p>Objeler elemanlarına erişmek için isimleri kullanırlar. Bu örnekte, insan.ad geriye Ali değerini döndürür:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var insan = {ad:"Ali", soyad:"Pak", yas:46};</p>
+				<button onclick="ornek15()">insan.ad</button>
+				<input type="text" name="ornek15cikti" id="ornek15cikti">
+			</fieldset>
+			<h2>Dizi Elemanları Obje Olabilir</h2>
+			<p>JavaScript değişkenleri obje olabilir. Diziler özel bir çeşit objedir.<br>
+			Bu yüzden, farklı türdeki değişkenleri aynı dizi içerisinde kullanabilirsiniz.<br>
+			Dizi içerisinde objeleriniz olabilir. Dizi içerisinde fonksiyonlarınız olabilir. Dizi içerisinde diziniz de olabilir: </p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	yeniDizi[0] = Date.now;
+	yeniDizi[1] = yeniFonksiyon;
+	yeniDizi[2] = arabalar;
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<h2>Dizi Özellikleri ve Metodları</h2>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<button onclick="ornek16()">meyveler.length</button>
+				<input type="text" name="ornek16cikti" id="ornek16cikti"><br>
+				<button onclick="ornek17()">meyveler.sort()</button>
+				<input type="text" name="ornek17cikti" id="ornek17cikti">
+			</fieldset>
+			<h2>Dizi Elemanı Eklemek</h2>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<button onclick="ornek18()">meyveler.push("Limon")</button>
+				<input type="text" name="ornek18cikti" id="ornek18cikti"><br>
+			</fieldset>
+			<h2>İlişkisel Diziler</h2>
+			<p>Birçok programlama dili, isimlendirilmiş indexli dizileri destekler.<br>
+			İsimlendirilmiş indexli dizilere ilişkisel diziler denir.<br>
+			JavaScript ilişkisel dizileri desteklemez.<br>
+			JavaScript'te diziler yalnızca numaralı index kullanır.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var insan = [];
+	insan[0] = "Ali";
+	insan[1] = "Pak";
+	insan[2] = 46;
+	var x = insan.length;     // insan.length 3 değerini döndürür
+	var y = insan[0];         // insan[0] "Ali" değerini döndürür
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var insan = [];
+	insan[0] = "Ali";
+	insan[1] = "Pak";
+	insan[2] = 46;
+	var x = insan.length;     // insan.length 3 değerini döndürür
+	var y = insan[0];         // insan[0] "Ali" değerini döndürür
+</script>   
+					</xmp>
+				</div>
+				<p style="background-color: yellow">Dikkat!<br>
+				JavaScript'te eğer isimlendirilmiş index kullanırsanız, JavaScript diziyi standart obje türüne çevirecektir.
+				Obje türüne çevrildikten sonra, bazı dizilerle ilgili metodları ve özellikler doğru sonuçlar vermeyecektir.</p>
+			</div>
+			<h2>Diziler ve Objeler Arasındaki Fark</h2>
+			<p>JavaScript'te, diziler numaralı index kullanır.<br>  
+			JavaScript'te, objeler isimlendirilmiş index kullanır.</p>
+			<p style="background-color: yellow">Diziler numaralı index kullanan özel türdeki objelerdir</p>
+			<h2>Dizi mi Obje mi Kullanmalı?</h2>
+			<p>JavaScript ilişkisel dizileri desteklemez.<br>
+			Elemanların isimlerinin yazı (string) olmasını istediğinizde obje kullanmalısınız.<br>
+			Elemanların isimlerinin numara olmasını istediğinizde dizi kullanmalısınız.</p>
+			<h2>new Array() Kullanımı</h2>
+			<p>JavaScript'teki <span style="color: red">new Array()</span> komutunu kullanmaya gerek yok.
+			Bunun yerine <span style="color: red">[]</span> köşeli parantezleri kullanmalısınız.
+			Bu örnekteki iki satır da iki yeni dizi oluşturmaktadır:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var noktalar = new Array();     // Kötü kullanım
+	var noktalar = [];              // İyi kullanım
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<h2>Dizi mi Değil mi?</h2>
+			<p>Genelde sorulan bir soru şudur: Bir değişkenin dizi olup olmadığını nasıl anlarız?<br>
+			Örnekte görüldüğü gibi, JavaScript'teki typeof geriye "object" değeri döndürüyor, "array" değil:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<button onclick="ornek19()">typeof meyveler</button>
+				<input type="text" name="ornek19cikti" id="ornek19cikti">
+			</fieldset>
+			<p>Obje döndürüyor, çünkü diziler aslında birer objedir.</p>
+			<p style="color: red">Çözüm 1: </p>
+			<p>Bu sorunu çözmek için <span style="color: red">Array.isArray()</span> metodunu kullanabiliriz:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<button onclick="ornek20()">Array.isArray(meyveler)</button>
+				<input type="text" name="ornek20cikti" id="ornek20cikti">
+			</fieldset>
+			<p style="color: red">Çözüm 2:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	function isArray(x) {
+    		return x.constructor.toString().indexOf("Array") > -1;
+	}
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Bu fonksiyon, eğer değişken bir diziyse her zaman "true" döndürür.</p>
+			<p>Daha doğrusu: eğer değişken prototipi Array kelimesini barındırıyorsa "true" döndürür.</p>
+			<p style="color: red">Çözüm 3:</p>
+			<p>instanceOf operatörü, eğer dizi köşeli parantezler kullanılarak oluşturulduysa, "true" değeri döndürür:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<button onclick="ornek21()">meyveler instanceof Array</button>
+				<input type="text" name="ornek21cikti" id="ornek21cikti">
+			</fieldset>
+			<h2>Dizileri String'e Çevirmek</h2>
+			<p>JavaScript metodu olan <span style="color: red">toString()</span> diziyi virgüllerle ayrılmış yazıya çevirir.</p>
+			<p><span style="color: red">join()</span> metodu da tüm diziyi yazıya çevirir.</p>
+			<p>toString() metoduna ek olarak ayraç işaretini kendiniz belirleyebilirsiniz:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<button onclick="ornek22()">meyveler.toString()</button>
+				<input type="text" name="ornek22cikti" id="ornek22cikti"><br>
+				<button onclick="ornek23()">meyveler.join("-")</button>
+				<input type="text" name="ornek23cikti" id="ornek23cikti">
+			</fieldset>
+			<h2>Pop ve Push Metodları</h2>
+			<p><span style="color: red">pop()</span> metodu dizideki son elemanı diziden çıkarır:</p>
+			<p><span style="color: red">pop()</span> metodu geriye çıkarılan elemanın ismini döndürür:</p>
+			<p><span style="color: red">push()</span> metodu dizinin sonuna yeni eleman ekler:</p>
+			<p><span style="color: red">push()</span> metodu geriye dizinin yeni uzunluğunu döndürür.</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<button onclick="ornek24()">meyveler.pop()</button>
+				<input type="text" name="ornek24cikti" id="ornek24cikti"><br>
+				<button onclick="ornek25()">meyveler.push("Limon")</button>
+				<input type="text" name="ornek25cikti" id="ornek25cikti">
+			</fieldset>
+			<h2>Shift Metodu</h2>
+			<p>Shift metodu da pop metodu gibidir fakat son elemanı değil ilk elemanı diziden çıkarır.<br>Daha sonra da çıkarılan eleman yerine bütün diziyi çıkarılan 0 index numarasına göre tekrar kaydırır.</p>
+			<p><span style="color: red">shift()</span> metodu geriye diziden çıkarılan elemanın değerini döndürür.</p>
+			<p><span style="color: red">unshift()</span> metodu dizinin başına yeni bir eleman ekler ve eski elemanları tekrar kaydırır: </p>
+			<p><span style="color: red">unshift()</span> metodu geriye dizinin yeni uzunluğunu döndürür.</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<button onclick="ornek26()">meyveler.shift()</button>
+				<input type="text" name="ornek26cikti" id="ornek26cikti"><br>
+				<button onclick="ornek27()">meyveler.unshift("Limon")</button>
+				<input type="text" name="ornek27cikti" id="ornek27cikti">
+			</fieldset>
+			<h2>Eleman Silmek</h2>
+			<p>Diziler JavaScript'te obje olarak kabul edildiklerinden, objeler için kullanılan <span style="color: red">delete</span> komutu diziler için de kullanılabilir:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<button onclick="ornek28()">delete meyveler[0]</button>
+				<input type="text" name="ornek28cikti" id="ornek28cikti">
+				<p style="background-color: yellow">delete komutunu kullanmak, dizide undefined yani tanımlanamayan boşluklar oluşturacağından, pop() veya shift() metodlarını kullanmalısınız.</p>
+			</fieldset>
+			<h2>Splice Metodu ile Eleman Eklemek</h2>
+			<p><span style="color: red">splice()</span> metodu diziye yeni elemanlar eklemek için kullanılabilir:</p>
+			<p><span style="color: red">splice()</span> metodu geriye silinen elemanların olduğu bir dizi döndürür.</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+				<p>meyveler.splice(2, 2, "Limon", "Armut");</p>
+				<button onclick="ornek29()">meyveler.splice(2, 2, "Limon", "Armut")</button>
+				<input type="text" name="ornek29cikti" id="ornek29cikti">
+			</fieldset>
+			<p>İlk parametre olan 2 sayısı, yeni elemanların dizide nereye ekleneceğini belirler.<br>
+			İkinci parametre olan 0 sayısı, kaç tane elemanın diziden silineceğini belirler.<br>
+			Diğer parametreler ise, eklenecek elemanları belirler.</p>
+			<h2>Splice Metodunu Eleman Silmek İçin Kullanmak</h2>
+			<p><span style="color: red">splice()</span> metodunu doğru parametrelerle kullanarak dizide boşluklar bırakmadan diziden eleman silmekte faydalanabilirsiniz:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var meyveler = ["Muz", "Portakal", "Elma", "Mango"];
+
+	meyveler.splice(0, 1);      //   meyveler dizisindeki ilk elemanı siler
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<h2>Dizileri Birleştirmek</h2>
+			<p><span style="color: red">concat()</span> metodu var olan dizileri uç uca ekleyerek yeni bir dizi oluşturur.</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Elma", "Armut"];</p>
+				<p>var sebzeler = ["Patlıcan", "Ispanak"];</p>
+				<p>var yiyecekler = meyveler.concat(sebzeler)</p>
+				<button onclick="ornek30()">meyveler.concat(sebzeler)</button>
+				<input type="text" name="ornek30cikti" id="ornek30cikti">
+				<p style="background-color: yellow">concat() metodu var olan dizilerde hiçbir değişiklik yapmaz. Her zaman geriye yeni bir dizi döndürür.</p>
+				<p>concat() metodu birden fazla diziyi de birleştirebilir: <span style="color: red">concat(meyveler,sebzeler,icecekler)</span></p>
+			</fieldset>
+			<h2>Diziyi Kesmek</h2>
+			<p><span style="color: red">slice()</span> metodu dizinin bir bölümünü keser ve yeni bir diziye aktarır.</p>
+			<p>Bu örnekte, dizinin Elma'dan yani 2. elemanından başlayarak kalan kısmı kesilir ve yeni bir diziye aktarılır:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var meyveler = ["Muz", "Portakal", "Elma", "Mango", "Limon"];</p>
+				<p>var yeniDizi = meyveler.slice(2);</p>
+				<button onclick="ornek31()">yeniDizi</button>
+				<input type="text" name="ornek31cikti" id="ornek31cikti">
+				<p style="background-color: yellow">slice() metodu var olan dizide bir değişiklik yapmaz, yalnızca belirtilen kısımları yeni bir diziye aktarır.</p>
+			</fieldset>
+			<p>slice() metodu iki tane değer alabilir: <span style="color: red">slice(1, 3)</span> gibi.</p>
+			<p>Bu metod, birinci değerden yani bu örnekte 1'den, ikinci değere kadar yani 3'e kadar (fakat 3 dahil değil) olan elemanları seçer:</p>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonlar.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>JavaScript Sayı İşlemleri</h1>
+			<p>JavaScript programlama dilinde tek bir sayı türü vardır.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var adet = 15; // tam sayı
+	
+	var fiyat = 3.99; // Küsurlu sayılar. Para gibi.
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Çok büyük veya çok küçük sayılar bilimsel gösterim ile yazılabilir:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var sayi1 = 321e5;    // 32100000
+	
+	var sayi2 = 312e-5;   // 0.00321
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>JavaScript diğer programlama dillerinden farklı olarak, int, short, long gibi farklı sayı türleri tanımlamaz.
+			JavaScript sayıları her zaman 64-bit Floating Point (kayan nokta) olarak tutar.
+			</p>
+			<h2>JavaScript NaN Nedir? (Not a Number / Bir Sayı Değil)</h2>
+			<p>NaN kelimesi JavaScript için ayrılmış bir kelimedir. Bir matematiksel işlemde sayı olmayan bir değer kullandığınızda</p>
+			<p>sonuç <span style="color: red">NaN</span> döner. <span style="color: red">Örneğin 100 / "armut"</span> işleminin sonucu NaN'dır.</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>10 / "armut"</p>
+				<button onclick="ornek9()">Sonuc:</button>
+				<input type="text" name="ornek9cikti" id="ornek9cikti">
+			</fieldset>
+			<p>Fakat eğer string değer sayısal değer içeriyorsa sonuç sayı olur:</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>10 / "2"</p>
+				<button onclick="ornek10()">Sonuc:</button>
+				<input type="text" name="ornek10cikti" id="ornek10cikti">
+			</fieldset>
+			<h2>JavaScript Programlama Dilinde Sayılar Nesne Olabilir</h2>
+			<p>Daha önce stringde gördüğümüz gibi sayılar nesne olarak tanımlanabilir.<br>
+				Normalde JavaScript sayıları ilkel değerlere sahiptir: 1,255, 5678 gibi.<br>
+				Fakat <span style="color: red">var sayiNesne= new Number(123);</span> şeklinde nesne olarak tanımlanabilir.<br>
+			Bu şekilde tanımlamak JavaScript'i yavaşlatır. O sebepten gerçekten ne yaptığınızı bilmiyoranız kullanmayın.</p>
+			<h2>JavaScript toString() Metodu</h2>
+			<p><span style="color: red">toString()</span> metodu sayıyı stringe çevirir.</p>
+			<p>Sayıları sadece sayısal işlemlerde kullanırız. Bunun dışında bir string ile sayısı işleyeceksek, sayısal değeri stringe çeviririz.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var sayi = 100;
+	sayi.toString();
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<h2>JavaScript toFixed() Metodu</h2>
+			<p><span style="color: red">toFixed()</span> metodu, belirtilen sayıda ondalık değere sahip string döndürür.<br>
+			Özellikle para gibi değerleri tutan değişkenlerde kullanılır.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var sayi = 9.765;
+	sayi.toFixed(0);           // 10 döndürür. Yukarı ya da aşağı doğru yuvarlar.
+	sayi.toFixed(2);           // 9.77 döndürür
+	sayi.toFixed(4);           // 9.7650 döndürür
+	sayi.toFixed(6);           // 9.765000 döndürür
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<h2>JavaScript toPrecision() Metodu</h2>
+			<p>JavaScript <span style="color: red">toPrecision(n)</span> metodu uygulanan sayı, parentez içinde verilen değerden daha fazla tam sayı içeriyorsa bilimsel (üstel) gösterim ile döndürür:
+			</p>
+			<p>Örneğin: <span style="color: red">(312).toPrecision(2)</span> 3.1e+2 sonucunu döndürür.</p>
+			<p>Bilimsel gösterim, çok büyük veya küçük sayıları göstermek için kullanılan bir standarttır.
+			Bilimsel çalışmalarda çok büyük ve küçük sayılar kullanılır</p>
+			<p><span style="color: red">toPrecision(n)</span> metodu daha çok ondalıklı işlemlerde kullanılır. Parantez içinde verilen sayı kadar basamağı size döndürür.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	var sayi = 9.765;
+
+	sayi.toPrecision(2);          // 9.8 döndürür
+	sayi.toPrecision(3);          // 9.77 döndürür
+	sayi.toPrecision(4);          // 9.765 döndürür
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<h2>JavaScript Bir Değişkeni Sayıya Çevirmek</h2>
+			<p>JavaScript programlama dilinle bir değişkeni sayıya çevirmek için 3 metod vardır:</p>
+			<p><span style="color: red">Number()</span> metodu, <span style="color: red">parseInt()</span> metodu, <span style="color: red">parseFloat()</span> metodu</p>
+			<h2>JavaScript Number() Metodu</h2>
+			<p>Number() metodu JavaScript değişkenleri sayıya çevirmek için kulllanılır:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	degisken = true;
+	Number(degisken);        //  1 döndürür
+	degisken = false;
+	degisken = "10"
+	Number(degisken);        //  10 döndürür
+	degisken = "50 50"
+	Number(degisken);        // NaN döndürür
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<p>var deger = true</p>
+				<button onclick="ornek11()">Number(deger)</button>
+				<input type="text" name="ornek11cikti" id="ornek11cikti">
+			</fieldset>
+			<h2>JavaScript parseInt() Metodu</h2>
+			<p><span style="color: red">parseInt()</span> string değeri ayrıştırır, geriye tam sayı döndürür:</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	parseInt("5");         // 5 döndürür
+	parseInt("5.22");      // 5 döndürür
+	parseInt("5 10 15");   // 5 döndürür
+	parseInt(5 yıl");      // 5 döndürür
+	parseInt("sinif 5");   // NaN döndürür
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<h2>JavaScript parseFloat() Metodu</h2>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+   	parseFloat("5");         // 5 döndürür
+	parseFloat("5.22");      // 5.22 döndürür
+	parseFloat("5 10 15");   // 5 döndürür
+	parseFloat(5 yıl");      //5 döndürür
+	parseFloat("sinif 5");   // NaN döndürür
+</script>   
+					</xmp>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonlar.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>JavaScript Olaylar(Events)</h1>
+			<p>JavaScript nesne tabanlı (object-oriented) bir dildir. Nesne tabanlı olmasından dolayı olay yönelimli çalışır. Örneğin; bir button'a tıkladıktan sonra çıkan uyarı penceresi JavaScript'in nesne tabanlı bir dil olduğunun açık bir göstergesidir.</p>
+			<p>JavaScript'te bazı olayların gerçekleştirilmesi için geliştirilmiş ve web sitelerinde senelerdir başarı ile kullanılan hazır olaylar vardır. Şimdi bu olayları öğrenmeye başlayalım.</p>
+			<h2>onload Olayı</h2>
+			<p>Daima <<span>body></span> etiketi ile kullanılır. Sayfa yüklendikten sonra gerçekleşecek olayları yerine getirir.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <script>
+            function hosGeldiniz() {
+                alert("Sayfamıza hoş geldiniz!");
+            }
+        </script>     
+    </head>
+    <body onload="hosGeldiniz()">
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html> 
+
+					</xmp>
+				</div>
+			</div>
+			<p>hosGeldiniz( ) isimli bir fonksiyon tanımladım ve bu fonksiyonumu onload olayı ile body etiketi içerisinde kullandım. Sayfam yüklendikten sonra "Sayfamıza hoş geldiniz!" bildirimi yayınlanacaktır. onload olayı bu şekilde çalışmaktadır.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <script>
+            window.onload = alert("Sayfamıza hoş geldiniz!");
+        </script>     
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>
+					</xmp>
+				</div>
+			</div>
+			<p>Bu kodları onload olayını kullanmadan bu şekilde de yazabiliriz.</p>
+			<h2>onclick Olayı</h2>
+			<p>En çok kullanılan olaydır. Bir nesneye tıklandığında çalışacak kodları yerine getirir.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    function onayla() {
+        alert("Mesajınız başarı ile gönderildi. Sizinle en yakın zamanda iletişime geçeceğiz.");
+    }
+    function temizle() {
+        return confirm("Form temizlensin mi?");
+    }
+</script>    
+			<form>
+			    <fieldset>
+			        <legend>Mesaj Gönder</legend>
+			        <label>Rumuzunuz:         </label> <input type="text"/> <br/><br/>
+			        <label>e-Posta Adresiniz:  </label> <input type="text"/> <br/><br/>
+			        <label>Doğum Tarihiniz:   </label> <input type="text"/> <br/><br/>
+			        <label>Mesajınız:         </label> <textarea  rows="2" cols="18"></textarea> <br/><br/>
+			        <input type="submit" value="Onayla" onclick="onayla()"/><br/><br/>
+			        <input type="reset" value="Formu Temizle" onclick="return temizle()"/>
+			    </fieldset>
+			</form>
+					</xmp>
+				</div>
+			</div>
+			<p>Şeklinde kodlarımız olsun. HTML5 derslerinde kullandığımız örnek bir form. İlk olarak onayla( ) ve temizle( ) isimli iki fonksiyon tanımladım. Bunları "Onayla" ve "Form Temizle" düğmelerinde kullandım.</p>
+			<p>Burada dikkatimizi çeken temizle( ) fonksiyonundaki confirm( ) fonksiyonu ve return deyimi olmalı. confirm dilimizde onayla anlamına gelmektedir. "Ok" ve "Cancel" seçimlerinin olduğu bir uyarı penceresi açar. Fonksiyonda ve onclick olayında return kullanmamızın sebebi kullanıcı iptal'e tıkladığında reset'leme işlevinin yerine getirilmemesini sağlamak için.</p>
+			<form>
+   				<fieldset>
+        			<legend>Mesaj Gönder</legend>
+        			<label>Rumuzunuz:         </label> <input class = "inputs" type="text"/> <br/><br/>
+			        <label>e-Posta Adresiniz:  </label> <input class = "inputs" type="text"/> <br/><br/>
+			        <label>Doğum Tarihiniz:   </label> <input class = "inputs" type="text"/> <br/><br/>
+			        <label>Mesajınız:         </label> <textarea class = "inputs" rows="2" cols="18"></textarea> <br/><br/>
+			        <input type="submit" value="Onayla" onclick="onayla()"/><br/><br/>
+			        <input type="reset" value="Formu Temizle" onclick="return temizle()"/>
+    			</fieldset>
+			</form>
+			<h2>onMouseOver, onMouseDown, onMouseOver</h2>
+			<table align="center" width="99.7%" border="1" cellspacing="0" cellpadding="3">
+				  <tr>
+				    <td>Olayın Adı</td>
+				    <td>Tetikleyici</td>
+				    <td>Etkilenecek Öğeler</td>
+				  </tr>
+				  <tr>
+				    <td>onClick</td>
+				    <td><button id="b1" onClick="tiklandi()">Tıkla</button></td>
+				    <td><p id="metin1">&nbsp;</p></td>
+				  </tr>
+				  <tr>
+				    <td>onMouseOver - onMouseOut</td>
+				    <td><button id="b2" onMouseOver="uzerimde()" onMouseOut="disarida()">İmleç Üzerimde</button></td>
+				    <td><p id="metin2">&nbsp;</p></td>
+				  </tr>
+				  <tr>
+				    <td>onMouseDown</td>
+				    <td><button id="b3" onMouseDown="basildi()" onMouseUp="birakildi()">Fare Tuşu Basılı</button></td>
+				    <td><p id="metin3">&nbsp;</p></td>
+				  </tr>
+			</table>
+			<h2>onUnLoad</h2>
+			<p>Tarayıcıda açık haldeki sayfanın terkedilmesi olayıdır. Bu pencerenin kapatılmasıyla olabileceği gibi bir linke tıklayarak başka bir sayfaya geçilmesi de olabilir.</p>
+			<h2>onFocus</h2>
+			<p>Bir elemanın seçilerek odaklanılması olayıdır. Örneğin bir metin kutusuna tıklandığında kontrol o kutuya geçer ve kutu aktif olur. Bir sonraki konuda bununla ilgili bir örnek bulunmaktadır.</p>
+			<h2>onBlur</h2>
+			<p>Aktif haldeki elemanın terk edilmesi olayıdır. Örneğin bir metin kutusu aktifken, başka bir yere tıklanarak kutudan çıkıldığında blur olayı meydana gelmiş olur.</p>
+			<h2>onKeyDown</h2>
+			<p>Klavyeden bir tuşa basılması olayıdır. Basılan tuşun ASCII kodu Event.keyCode özelliği ile öğrenilebilir. String.fromCharCode metodu ise okunan karakter kodunu tuşun ismine çevirebilir.</p>
+			<h2>onSelect</h2>
+			<p>Bir metin kutusu içindeki metnin seçilmesi olayıdır.</p>
+			<fieldset>
+				<legend>Örnek</legend>
+				<label>Metini seçin:</label> <textarea id="textSelectExample" rows="1" cols="18" onselect="selectedTextAlert()">Merhabalar</textarea>
+			</fieldset>
+			<h2>onResize</h2>
+			<p>Tarayıcı penceresinin boyutunun değiştirilmesi olayıdır.</p>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>
