@@ -1,3 +1,3 @@
 # jsogreniyorum
  odev
- ![Lab_1 - Gif ](outputs/javascript.gif)
+ ![jsogreniyorum - Gif ](outputs/javascript.gif)
