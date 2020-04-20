@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonyapi.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/fonksiyonlar.html">Fonksiyon Kullanımı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/objectmodel.html">Object Kullanımı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/jsdom.html">DOM Yapısı</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>Fonksiyonlar</h1>
+			<textarea id="textForNewElement" placeholder="Yazı giriniz"></textarea><br>
+			<input  type="button" name="yeniElement" value="Yeni Elment Oluştur" onclick="textForNewElmnt()">
+			<div id="newElementZone" align="center">
+				<h2><<span>Div></span> Alanı</h2>
+				<h3>Elementi çıkarmak için üzerine bas</h3>
+			</div>
+			<p>Örneğimizde, yazdığımız yazının dinamik olarak bir div içerisine <<span>p></span> elementi olarak eklendiğini görüyoruz.<br>Peki adım adım bunu nasıl başardık?</p>
+			<p>İlk olarak div bloğumuzu oluşturalım.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    <div id="newElementZone" align="center">
+		<h2><Div> Alanı</h2>
+    </div>
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>burada id olarak newElementZone adını verdik. Bu id bizim o elemente erişebilmemiz için önemli.</p>
+			<p>İkinci olarak javaScript kısmımıza geçelim ve kodlarımızın ne işe yaradığını açıklayalım.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    	var metin = document.getElementById("textForNewElement").value; //Metnin içerisindeki veriyi metin değişkenine atadık.
+
+	var text = document.createTextNode(metin); //Texti element olarak eklemeden önce Node oluşturmak gerekli.
+
+	var newElement = document.createElement("P"); // Bir <p> elementi oluşturduk ve newElement değişkenine atadık.
+
+	newElement.id = "newP" // Oluşturduğumuz elemente id atayabiliyoruz. Bu id o elemente erişmemiz için lazım olabilir.
+
+	newElement.appendChild(text); // Oluşturduğumuz Node'yi yeni elementimize atadık.
+
+	var contentOpt = document.getElementById("newElementZone"); //Başta oluşturduğumuz div elementini değişkene atadık.
+
+	contentOpt.appendChild(newElement);	// Sonunda eriştiğimiz div elementine p elementini eklemiş olduk.
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Adım adım temel olarak eklemeyi böyle yapabiliyoruz.</p>
+			<p>Peki gördüğümüz gibi eklediğimiz p elementlerini nasıl kaldırabiliriz ?<br> Bastığımız p elementini kaldırmak için bu elementi oluştururken onClick() fonskiyonunu bu elemente atamamız gereklidir.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    newElement.onclick = function(){deletePFromId(newElement)};
+</script>   
+					</xmp>
+				</div>
+				<p>Önceki örnekte p elementini oluşturmuştuk ve bunu newElement değişkenine atmıştık. Ondan sonraki satırda ise bu elemente onClick fonksiyonunu atadık ve parametre olarak o elementi yolladık ki bastığımızda, basılan element fonksiyonda işleme girsin</p>
+			</div>
+			<p>Şimdi örnek olarak bizim sitemizde bulunan kod paylaşma bloğunu nasıl JavaScript ile ekleyebiliriz onu gösterelim</p>
+			<input id="addCodeBlock" type="button" name="addCodeBlock" value="Code Bloğu Ekle" style="margin-top: 10px;" onclick="addCodeBlock()">
+			<div id="newElementZone2" align="center" style="width: 97%">
+				<h2><<span>Div></span> Alanı</h2>
+				<h3>Kaldırmak için kod bloğunun üzerine bas</h3>
+			</div>
+			<p>İlk olarak bir div alanı oluşturalım.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    <div id="newElementZone2" align="center">
+	<h2><Div> Alanı</h2>
+   </div>
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Şimdi ise javascript kodumuzu inceleyelim.</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    	var elementZone = document.getElementById("newElementZone2"); //Oluşturduğumuz div alanını değişkenimize attık.
+
+	var div = document.createElement("div"); //Kod bloğumuzun en dış div alanını oluşturduk.
+	div.id = "codeblock";	//Oluşturduğumuz div alanına id'mizi atadık. Bu id css de önceden tasarlanmış idi.
+
+	var h4 = document.createElement("h4"); //Başlığımız için h4 elementi oluşturduk.
+	h4.innerHTML = "Örnek"; //h4 elementinin içine yazıyı yazdık.
+	
+	var insideDiv = document.createElement("div"); //Kod bloğumuzun içeri kısmındaki div alanını oluşturduk.
+	insideDiv.id = "codeArea"; //Oluşturduğumuz son div'e id atadık.
+	insideDiv.innerHTML = "Uka Code"; //Oluşturduğumuz son div içerisine yazı yazdık.
+
+	div.appendChild(h4); //Sıra ile Kod bloğunun en dışındaki div'e başlığımız olan h4'ü atadık.
+	div.appendChild(insideDiv); //İkinci sırada içerde oluşturmamız gereken div'i atmak var.
+	elementZone.appendChild(div); // Son olarak en dıştaki div'i en başta oluşturduğumuz div içerisine attığımızda kod bloğumuz oluşmuş olmaktadır.
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Peki bu kod bloklarını nasıl kaldırabiliriz?</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    div.onclick = function(){deletePFromId2(div)};
+</script>   
+					</xmp>
+				</div>
+			</div>
+			<p>Kod bloğunun en dışındaki oluşturduğumuz div için bu onclick fonksiyonunu atar isek, kod bloğunun üzerine her bastığımızda oluşturduğumuz bütün kod bloğu div alanından kalkacaktır</p>
+			<p>deletePFromId2() fonksiyonu da aşağıdaki gibi olması lazım</p>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+<script>
+    function deletePFromId2(p){
+	var element = document.getElementById("newElementZone2");
+	element.removeChild(p);
+	}
+</script>   
+					</xmp>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

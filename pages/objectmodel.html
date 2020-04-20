@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonyapi.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/fonksiyonlar.html">Fonksiyon Kullanımı</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/objectmodel.html">Object Kullanımı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/jsdom.html">DOM Yapısı</a>
+			</div>
+			<div class="issues " align="center">
+				<a class="issuesbutton" href="../pages/odev2.html">HW2 Örnekleri</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>Object (Nesne) Kullanımı</h1>
+			<p>5 adet veri tip, 3 adet Object tipi bulunan javaScript dilinde veri tiplerini <b style="color: red">Number, String, Boolean, Undefined, ve Null (bu da bir object’dir)</b>. Object tipini ise fonksiyon, dizi, nesne (object)  gibi referanslar oluşturmaktadır. Bu yazımızda JavaScript’te bir Object nasıl oluşturulur ve nasıl kullanılır bunu göreceğiz. Öncelikle Object oluşturma hangi yöntemlerle yapılır buna bakalım.</p>
+			<p>JavaScript’te nesne oluşturmak için { } süslü parantezler kullanılır.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+var arac={ };
+
+var ogrenci={ };
+					</xmp>
+				</div>
+			</div>
+			<p>Yukarıdaki şekilde bir tanımlama yapıldığında içinde hiçbir şey bulunmayan arac ve ogrenci nesneleri oluşturulmuş olur.</p>
+			<p>Şimdi de oluşturulan nesnelere özellik atamasının nasıl yapılacağına bakalım.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+var arac={
+    marka:"Renault",
+    model:"Clio",
+    yil:2018,
+    renk:"Beyaz",
+    yakit:"Dizel",
+    saatUcreti:60
+};
+					</xmp>
+				</div>
+			</div>
+			<p>Yukarıdaki tanımlamaya baktığımızda;</p>
+			<b>Özellik: değer</b>
+			<p>şeklinde bir atama yapıldığını ve birden fazla özellik eklendiğinde <b>“,” virgül</b> ile ayrıldığını görüyoruz.</p>
+			<p>Şimdi aşağıdaki örneği inceleyelim. Örneğimizde  <b>arac</b> isimli Object (nesne) tanımlaması ve <b>bu nesneye ait özellik tanımlaması</b> yapılarak bu özelliklerin sayfada yazdırılması sağlanmakta.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Örnek</h2>
+				<div id="codeArea">
+					<xmp>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>www.ukacode.com</title>
+        <meta charset="utf-8">
+    </head>
+<body>
+ 
+<p><u>JavaScript Object Kullanımı</u></p>
+ 
+<p id="bilgi"></p>
+<p><b>Araç Detayları</b></p>
+<p id="detay"></p>
+<script>
+var arac={
+    marka:"Renault",
+    model:"Clio",
+    yil:2018,
+    renk:"Beyaz",
+    yakit:"Dizel",
+    saatUcreti:60
+};
+ 
+document.getElementById("bilgi").innerHTML =
+arac.marka + " " + arac.model + " model "+arac.yakit+" aracın saatlik kiralama ücreti : "+arac.saatUcreti;
+    
+document.getElementById("detay").innerHTML=
+    "Marka      : "+arac.marka+"<br>"+
+    "Model      : "+arac.model+"<br>"+
+    "Model Yılı : "+arac.model+"<br>"+
+    "Renk       : "+arac.renk+"<br>"+
+    "Yakıt Türü : "+arac.yakit+"<br>"+
+    "Saat Ücreti: "+arac.saatUcreti;
+    
+</script>
+ 
+</body>
+</html>
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				
+				<button onclick="arabaNesnesiGetir()">Sayfamızı çalıştırdığımızda aşağıdaki görüntü oluşacaktır.</button>
+				<p id="bilgi"></p>
+				<p id="detay"></p>
+				
+			</fieldset>
+			<p>Şimdi de nesnemize <b>metot</b> tanımlaması yapalım. Metot tanımlamasını yukarıdaki örnek üzerinde gerçekleştireceğiz. Nesnemize <b>ucretHesapla</b> isminde bir metot tanımlayacağız. Bu fonksiyon dışarıdan bir <b>parametre</b> alarak çalışacaktır. Dışarıdan gönderilen <b>saat</b> bilgisini <b>saatUcreti</b> ile çarparak ödenecek tutarın hesaplanması görevini üstlenecektir.</p>
+			<p>Burada altını çizmekte fayda gördüğüm bir hususu belirtmek isterim.</p>
+			<b>Nesne içindeki özelliklerden biri metot içinde kullanılacaksa bu özellik this anahtar sözcüğü ile kullanılmalıdır. (this.saatUcreti)</b>
+			<p>Kodlarımıza ve ekran çıktısına göz atalım.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>www.ukacode.com</title>
+        <meta charset="utf-8">
+    </head>
+<body>
+ 
+<p><u>JavaScript Object Kullanımı</u></p>
+ 
+<p id="bilgi"></p>
+<p><b>Araç Detayları</b></p>
+<p id="detay"></p>
+<p id="tutar"></p>
+<script>
+var arac={
+    marka:"Renault",
+    model:"Clio",
+    yil:2018,
+    renk:"Beyaz",
+    yakit:"Dizel",
+    saatUcreti:60,
+    ucretHesapla:function(saat){
+        return saat*this.saatUcreti;
+    }
+};
+ 
+document.getElementById("bilgi").innerHTML =
+arac.marka + " " + arac.model + " model "+arac.yakit+" aracın saatlik kiralama ücreti : "+arac.saatUcreti;
+    
+document.getElementById("detay").innerHTML=
+    "Marka      : "+arac.marka+"<br>"+
+    "Model      : "+arac.model+"<br>"+
+    "Model Yılı : "+arac.yil+"<br>"+
+    "Renk       : "+arac.renk+"<br>"+
+    "Yakıt Türü : "+arac.yakit+"<br>"+
+    "Saat Ücreti: "+arac.saatUcreti;
+    
+document.getElementById("tutar").innerHTML="Ödenecek Tutar : "+arac.ucretHesapla(3);
+    
+</script>
+ 
+</body>
+</html>
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				
+				<button onclick="arabaNesneHesapla()">Sayfamızı çalıştırdığımızda hesaplama aşağıdaki gibi olacaktır</button>
+				<p id="bilgi2"></p>
+				<p id="detay2"></p>
+				<p id="tutar"></p>
+				
+			</fieldset>
+			<p>Görüleceği üzere ödenecek tutar metot ile hesaplanarak gösterilmiştir.</p>
+			<p>Şimdi basit bir örnek daha oluşturalım. Bu örneğimizde <b>ogrenci</b> isimli bir object’ e ait <b>özellik</b> ve <b>metot</b> tanımlaması yapacağız. ad ve soyad özelliklerinin yazdırılmasını sağlayacağız. Örneğe ait <span><</span>script> kodları;</p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+<script>
+var Uye=function(){
+ 
+/*
+var anahtarı ile fonksiyon içinde tanımlanmıştır. fonksiyon dışında çağırma şansımız yok
+Uye.isim olarak çağıramayız. Sadece this.degiskenadi şeklinde yapılan bildirimler dışarıdan çağırır.
+*/
+	var isim;
+	var soyisim;
+	this.yas=18;
+	 
+	/*fonksiyon içinde tanımlanan isim değişkenine dışarıdan değer aktarmak için kullanılır. setter metodu*/
+	this.setIsim=function(v)
+	{
+		isim=v;
+	}
+	/*fonksiyon içinde tanımlanan isim değişkenindeki değeri okumak için kullanılır. getter metodu*/
+	this.getIsim=function()
+	{
+		return isim;
+	}
+	 
+	this.setSoyisim=function(v)
+	{
+		soyisim=v;
+	}
+	 
+	/*sınıf içinde tanımlanmış bir fonksyion*/
+	this.adSoyad=function(){
+	 
+		return isim+" "+soyisim;
+	}
+ 
+}
+ 
+var Uye1=new Uye();
+ 
+Uye1.setIsim("hayri");
+Uye1.setSoyisim("KOÇ");
+ 
+/*this anahtarı ile tanımlanan değişken doğrudan çarılıyor.*/
+Uye1.yas=20;
+document.write(Uye1.adSoyad());
+document.write("<br>");
+document.write(Uye1.getIsim()+" ");
+document.write("<br>");
+document.write(Uye1.yas);
+ 
+</script>
+					</xmp>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

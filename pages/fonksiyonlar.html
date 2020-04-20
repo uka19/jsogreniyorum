@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonyapi.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/fonksiyonlar.html">Fonksiyon Kullanımı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/objectmodel.html">Object Kullanımı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/jsdom.html">DOM Yapısı</a>
+			</div>
+			<div class="issues " align="center">
+				<a class="issuesbutton" href="../pages/odev2.html">HW2 Örnekleri</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>Fonksiyon Kullanımı</h1>
+			<p>-Bir olay meydana geldiğinde (Bir kullanıcı bir düğmeye tıkladığında)<br>-Doğrudan çağrılan fonksiyonlar<br>-Otomatik (kendi kendine çağrılan)</p>
+			<p><span style="color: red;">Not :</span> javaScript büyük harf küçük harf farkına duyarlıdır; Bu yüzden javaScript fonksiyon adları tanımlama ve fonksiyonu çağırırken harflerin büyük ya da küçük oluşuna dikkat etmek gerekiyor.</p>
+			<h2>Parametre ve Argüman Kavramı</h2>
+			<p>Fonksiyon bildiriminde, fonksiyona girdi olarak, kullanılan değişkenlere parametre denir. </p>
+			<p>Argüman ise fonksiyon çağrılırken gönderilen değere(lere) verilen addır. Bunun yanısıra fonksiyonlarda argüman kullanma zorunluluğu yoktur.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Örnek</h2>
+				<div id="codeArea">
+					<xmp>
+// Fonksiyon bildiriliyor  
+
+function topla(x,y) // Burada x ve y parametre
+   {
+     return (x+y);
+   }
+    
+    
+ //Fonksiyon çağrılıyor 
+  
+t = topla( 7,3 ); // Burada 7 ve 3 argüman 
+					</xmp>
+				</div>
+			</div>
+			<p>Argümanların giriliş sırası ( 7,3 )'e göre parametre "x=7" atanır ve "y=3" atanır unutmayın. </p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+function okul (ad,sinif)
+
+{
+
+	alert ( "Hoşgeldiniz " + ad + "," + sinif );
+
+}
+					</xmp>
+				</div>
+			</div>
+			<div id="codeblock">
+				<h2 style="color: white">HTML</h2>
+				<div id="codeArea">
+					<xmp>
+<button onclick = "okul('Ali','9A')">buraya tıklayın </button>
+
+<button onclick = "okul('Hasan','8B')">buraya tıklayın </button>
+					</xmp>
+				</div>
+			</div>
+			<p>Argümanlar ile aynı kodu birçok kez kullanabilirsiniz, ve farklı sonuçlar elde  edersiniz.</p>
+			<div id="codeblock">
+				<h2 style="color: white">HTML</h2>
+				<div id="codeArea">
+					<xmp>
+<p id="demo"> </p>
+					</xmp>
+				</div>
+			</div>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+function derece(fahrenheit) {
+ 
+    return (5/9) * (fahrenheit-32);
+}
+
+document.getElementById("demo").innerHTML = derece(77);
+					</xmp>
+				</div>
+			</div>
+			<p>Yukarıda ki örnekte farklı Fahrenheit girerek farklı Derece, sonuçları elde edilir.</p>
+			<h2>Fonksiyonları değişken olarak kullanma</h2>
+			<p>Fonksiyonları değişkene atayarak başka javaScript işlemlerinde kullanılır.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+var x = derece(32);
+					</xmp>
+				</div>
+			</div>
+			<h2>Fonksiyonlarda geri dönüş (return)</h2>
+			<p>return anahtar sözcüğünün iki önemli işlevi vardır:</p>
+			<p>-fonksiyonun geri dönüş değerini oluşturur.<br>-fonksiyonu sonlandırır.</p>
+			<p>Bu return deyiminden sonra bir değişken, işlem, sabit veya başka bir fonksiyon 7yazılabilir. Örneğin:</p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+return (x+y/2); //Parantez kullanmak zorunlu değil
+   
+return 20;     //Değişken kullanmak mecburu değil 
+   
+return topla(x,y)/4.0; // Önce topla fonksiyonu çalışır 
+					</xmp>
+				</div>
+			</div>
+			<p>Bir fonksiyonda birden çok geri dönüş değeri kullanılabilir. Fakat, ilk karşılaşılan return deyiminden sonra fonksiyon sonlananır, ve çağrılan yere bu değer gönderilir. Örneğin aşağıdaki sinif fonksiyonunda beş tane return deyimi 
+kullanılmıştır.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+function sinif(not)
+  {
+
+    if( not>=0 && not<50  ) return 'F';
+    if( not>=50 && not<70 ) return 'D';
+    if( not>=70 && not<80 ) return 'C';
+    if( not>=80 && not<90 ) return 'B';
+    if( not>=90           ) return 'A';
+  }
+   
+var y = sinif(60);  
+
+alert(y);  
+					</xmp>
+				</div>
+			</div>
+			<p>Bu fonksiyon kendisine parametre olarak gelen 0-100 arasındaki bir notun harf karşılığını gönderir. Aslında geri gönderilen değer bir tanedir.</p>
+			<p>Sayının karesini döndüren fonksiyon hazırlayalım.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+function kare(x) {
+
+    return x * x;              
+}
+
+var y = kare(5);
+
+alert("sonuc...:"+y); // çıktı:25  
+					</xmp>
+				</div>
+			</div>
+			<p>HTML etiketlerin içinden parametreli fonksiyonumuzu çağıralım.</p>
+			<div id="codeblock">
+				<h2 style="color: white">Javascript</h2>
+				<div id="codeArea">
+					<xmp>
+function degistir_text (x)
+
+{
+	x.innerHTML = "Teşekkürler!";
+}
+					</xmp>
+				</div>
+			</div>
+			<div id="codeblock">
+				<h2 style="color: white">HTML</h2>
+				<div id="codeArea">
+					<xmp>
+<h1 onclick = "degistir_text (this)" > metnin üzerine tıklayın</h1>
+					</xmp>
+				</div>
+			</div>
+			<fieldset>
+				<legend>Örnek</legend>
+				<h1 onclick = "degistir_text (this)" > metnin üzerine tıklayın</h1>
+			</fieldset>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

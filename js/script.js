@@ -77,7 +77,7 @@ function ornek9(){
 	document.getElementById("ornek9cikti").value = deger;	
 }
 function ornek10(){
-	var deger = 10/"2";
+	var deger = 10/'2';
 	document.getElementById("ornek10cikti").value = deger;	
 }
 function ornek11(){
@@ -182,4 +182,90 @@ function ornek32(){
 }
 function ornek33(){
 	document.getElementById("ornek33cikti").value = "John".constructor;	
+}
+function textForNewElmnt(){
+	var metin = document.getElementById("textForNewElement").value;
+	var text = document.createTextNode(metin);
+	var newElement = document.createElement("P");
+	newElement.onclick = function(){deletePFromId(newElement)};
+	newElement.appendChild(text);
+	var contentOpt = document.getElementById("newElementZone");
+	contentOpt.appendChild(newElement);		
+}
+function deletePFromId(p){
+	var element = document.getElementById("newElementZone");
+	element.removeChild(p);
+}
+
+function addCodeBlock(){
+	var elementZone = document.getElementById("newElementZone2");
+	var div = document.createElement("div");
+	div.id = "codeblock";
+
+	div.onclick = function(){deletePFromId2(div)};
+
+	var h4 = document.createElement("h4");
+	h4.innerHTML = "Örnek";
+	
+	var insideDiv = document.createElement("div");
+	insideDiv.id = "codeArea";
+	insideDiv.innerHTML = "Uka Code";
+	div.appendChild(h4);
+	div.appendChild(insideDiv);
+	elementZone.appendChild(div);
+}
+
+function deletePFromId2(p){
+	var element = document.getElementById("newElementZone2");
+	element.removeChild(p);
+}
+function degistir_text (x){
+	x.innerHTML = "Metin Degisti";
+}
+function arabaNesnesiGetir(){
+	var arac={
+    marka:"Renault",
+    model:"Clio",
+    yil:2018,
+    renk:"Beyaz",
+    yakit:"Dizel",
+    saatUcreti:60
+	};
+ 
+	document.getElementById("bilgi").innerHTML =
+	arac.marka + " " + arac.model + " model "+arac.yakit+" aracın saatlik kiralama ücreti : "+arac.saatUcreti;
+	    
+	document.getElementById("detay").innerHTML=
+	    "Marka      : "+arac.marka+"<br>"+
+	    "Model      : "+arac.model+"<br>"+
+	    "Model Yılı : "+arac.model+"<br>"+
+	    "Renk       : "+arac.renk+"<br>"+
+	    "Yakıt Türü : "+arac.yakit+"<br>"+
+	    "Saat Ücreti: "+arac.saatUcreti;
+}
+function arabaNesneHesapla(){
+	var arac={
+    marka:"Renault",
+    model:"Clio",
+    yil:2018,
+    renk:"Beyaz",
+    yakit:"Dizel",
+    saatUcreti:60,
+    ucretHesapla:function(saat){
+        return saat*this.saatUcreti;
+    }
+	};
+ 
+	document.getElementById("bilgi2").innerHTML =
+	arac.marka + " " + arac.model + " model "+arac.yakit+" aracın saatlik kiralama ücreti : "+arac.saatUcreti;
+	    
+	document.getElementById("detay2").innerHTML=
+	    "Marka      : "+arac.marka+"<br>"+
+	    "Model      : "+arac.model+"<br>"+
+	    "Model Yılı : "+arac.yil+"<br>"+
+	    "Renk       : "+arac.renk+"<br>"+
+	    "Yakıt Türü : "+arac.yakit+"<br>"+
+	    "Saat Ücreti: "+arac.saatUcreti;
+	    
+	document.getElementById("tutar").innerHTML="Ödenecek Tutar : "+arac.ucretHesapla(3);
 }

@@ -1,0 +1,68 @@
+@font-face{
+	font-family: formFont;
+	src: url(../assets/font-family/GOODDP.TTF);
+}
+html{
+	background-image: url("../assets/education.jpg");
+	width: 100%;
+	height: 100%;
+}
+body{
+	height: auto;
+}
+legend{
+	font-family: formFont;
+	font-size: 25px;
+	border-style: solid;
+	border-radius: 10px;
+	color: black;
+	border-color: black;
+	background-color: white;
+}
+fieldset{
+	background-color: white;
+}
+label{
+	font-family: formFont;
+	font-size: 20px;
+}
+#header{
+	width: 99%;
+	height: 70px;
+	background-color: #0fa2a9;
+	text-align: center;
+	font-family: formFont;
+	font-size: 60px;
+	color: white;
+	border: solid;
+	border-width: 5px;
+	border-radius: 15px;
+	border-color: black;
+}
+#content{
+	width: 100%;
+	height: 100%;
+}
+#formArea{
+	width: 250px;
+	height: auto;
+	margin: auto;
+	margin-top: 5%;
+	
+}
+#form{
+	width: 250px;
+	height: auto;
+	margin: auto;
+	padding: 10px;
+	border-style: solid;
+	border-radius: 15px;
+	background-color: #0fa2a9;
+}
+#account{
+	width: 250px;
+	height: auto;
+	margin: auto;
+	margin-top: 5%;
+	visibility: hidden;
+}

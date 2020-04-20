@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uka Code</title>
+	<link rel="stylesheet" type="text/css" href="../css/main_design.css">
+</head>
+<body>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<div id="headnav">
+		<div class="headnavdiv">
+			<img id="icon" src="../assets/uka.png">
+		</div>
+		<div class="headnavdiv">
+			<ul>
+				<li class="headnavitem"><a class="headmenulink"href="../home.html">Anasayfa</a></li>
+				<li class="headnavitem"><a class="headmenulink"href="javascript_giris.html">Javascript</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<div id="bod">
+		<div class="content contentnav">
+				<h1 align="center">Javascript</h1>
+			<div class="issues" align="center">
+				<a class="issuesbutton"href="../pages/javascript_giris.html">Javascript Giriş</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_syntax.html">JavaScript Yazılım (Syntax) yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_degiskenler.html">Değişkenler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_operatorler.html">Operatörler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_aritmetik.html">Aritmetik</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_veritipleri.html">Veri Tipleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_fonksiyonyapi.html">Fonksiyon Yapısı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_olaylar.html">Olaylar (Events)</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_stringislemleri.html">String İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_sayiislemleri.html">Sayı İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_diziislemleri.html">Dizi İşlemleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_ifkosul.html">If koşul yapıları</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_donguler.html">Döngüler</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_tipdonusum.html">Tip Dönüşümleri</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/javascript_yapi.html">Çalışma yapısı ve genel mimarisi</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/fonksiyonlar.html">Fonksiyon Kullanımı</a>
+			</div>
+			<div class="issues" align="center">
+				<a class="issuesbutton" href="../pages/objectmodel.html">Object Kullanımı</a>
+			</div>
+			<div class="issues entered" align="center">
+				<a class="issuesbutton" href="../pages/jsdom.html">DOM Yapısı</a>
+			</div>
+			<div class="issues " align="center">
+				<a class="issuesbutton" href="../pages/odev2.html">HW2 Örnekleri</a>
+			</div>
+		</div>
+		<div class="content contentopt">
+			<h1>DOM nedir?</h1>
+			<p>Document Object Model’in kısaltılmışı olan DOM, asla bir dil olmayıp, dilleri barındıran bir standart olarak tanımlanmaktadır.</p>
+			<p>Programlama dillerinin Object-Orientated olarak HTML ile anlaşması için HTML’i nesneler bütününe çevirecek bir ara standart gereklidir. DOM da tam bu noktada işe el atmaktadır. DOM, HTML ile programlama dilleri arasında bir standart oluşturarak bu dillerin HTML den bilgi alıp, bilgi vermesine yardımcı olur. DOM, Nesneler ve özelliklerden oluşur.</p>
+			<h2 style="color:red;">DOM’da HTML ile hazırladığınız sayfa, belge; bu belgenin içine yerleştirdiğiniz her türlü öğe ise nesne olarak adlandırılır.</h2>
+			<p>DOM da nesnelerin birer öğe (element) olarak kullanılabilmesi için hiyerarşik bir düzen izlenerek çağrılmaları gerekir. HTML’deki her bir elamanın birbiri ile hiyearşik bir yapı oluşturması ile oluşur.</p>
+			<img src="../assets/dom.png">
+			<h2>Neler yapar?</h2>
+			<p>DOM bir ağaç dizini gibi bütün dokümanları birbirine bağlar. Birden fazla programlama dilleri destekler(JS, PHP, Java, ASP vb.) ve aynı zamanda dosya oluşturmak, elementleri ve içeriklerini silme/ekleme gibi fonsiyonları vardır.</p>
+			<h2 style="color: red">Önemli nokta yazdığımız dilin DOM yapılarına bağlı olmasıdır.</h2>
+			<div id="codeblock">
+				<h4>Örnek</h4>
+				<div id="codeArea">
+					<xmp>
+ <html>
+   <head>
+       <titte>Webmaster.Kitchen</titte>
+       <script type="text/javascript">
+           document.formAdi.adiniz.value = 'Hakan Karataş';
+           document.getElementbyId('memleket').value = 'BAYBURT';
+       </script>
+   </head>
+   <body>
+       <form name="formAdi" method="post" action="">
+           <input type="text" name="adiniz">
+           <input type="text" id="memleket">
+       </form>
+   </body>
+</html>	
+
+					</xmp>
+				</div>
+			</div>
+			<p>HTML içerisine yerleştirilmiş öğeleri çağırmak için, içinde bulunduğu diğer öğelerin çağrılması bir yöntem iken, bir öğeye bir id vererek bu id üzerinden çağırmak da bir başka yöntemdir.</p>
+			<p>JavaScript kodumuzun ilk satırında metin kutusunun değeri hiyerarşik olarak çağrılmış ve değiştirilmiştir. İkinci satırda ise hiyerarşik yapı daha az önemsenerek JavaScript içindeki DOM’un temellerinden olan getElementById metodu kullanılmıştır.</p>
+		</div>
+	</div>
+	<div id="clear" >
+		
+	</div>
+	<div id="alticerik">
+		<img id="bottomImage" src="../assets/uka_button.png">
+		<p id="rightsWrite">Copyright<br>All Right Reserved</p>
+	</div>
+	
+</body>
+</html>

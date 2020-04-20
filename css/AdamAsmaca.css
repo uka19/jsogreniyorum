@@ -1,0 +1,63 @@
+@font-face{
+	font-family: adamAsmacaFont;
+	src: url(../assets/font-family/GOODDP.TTF);
+}
+p{
+	font-family: adamAsmacaFont;
+}
+html,body{
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+input{
+	background-color: transparent;
+	border: none;
+	cursor:pointer;
+	overflow: hidden;
+    outline:none;
+    font-family: adamAsmacaFont;
+    font-size: 55px;
+}
+span{
+	font-family: Comic Sans Ms;
+	margin-left: 10px;
+    font-size: 55px;
+}
+#header{
+	text-align: center;
+	font-size: 100px;
+	font-family: adamAsmacaFont;
+}
+#gameArea{
+	width: 100%;
+	height: 100%;
+	background-image: url(../assets/notebookPage.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+#asma{
+	width: 350px;
+	height: 350px;
+	margin: auto;
+	margin-top: 100px;
+}
+#asmaimage{
+	width: 350px;
+	height: 350px;
+	display: none;
+}
+#kelimeler{
+	width: 350px;
+	height: 80px;
+	margin: auto;
+	text-align: center;
+}
+#klavye{
+	width: 350px;
+	height: 350px;
+	margin: auto;
+	text-align: center;
+}
